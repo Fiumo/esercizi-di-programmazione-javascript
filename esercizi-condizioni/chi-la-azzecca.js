@@ -19,3 +19,26 @@
 
   http://www.imparareaprogrammare.it
 */
+
+var Player1= prompt("Player1 insert your guess number > 0");
+var Player2= prompt("Player2 insert your guess number > 0");
+var GuessNumb= Math.floor(Math.random() * (100-1) + 1);
+
+while (Player1<=0){
+  Player1= prompt("Player1 insert your guess number > 0");
+}
+while (Player2<=0){
+  Player2= prompt("Player2 insert your guess number > 0");
+}
+
+if (Player1==GuessNumb && Player2==GuessNumb){
+  console.log("Congrats both of you gain the challenge");
+} else if (Player1==GuessNumb) {
+  console.log("Congrats Player1 gain the challenge");
+} else if(Player2==GuessNumb) {
+  console.log("Congrats Player2 gain the challenge");
+} else if (Math.abs(Player1-GuessNumb)<Math.abs(Player2-GuessNumb)){
+  console.log("Congrats Player1 gain the challenge");
+} else {
+  console.log("Congrats Player2 gain the challenge");
+}
